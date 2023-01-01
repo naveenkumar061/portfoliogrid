@@ -151,7 +151,7 @@ p {
 }
 /* section */
 .section {
-  padding: 2rem 0;
+  padding: 5rem 0;
 }
 
 .section-center {
@@ -172,6 +172,10 @@ p {
   background: var(--clr-primary-5);
   margin-left: auto;
   margin-right: auto;
+}
+.section-title {
+  margin-bottom: 4rem;
+  text-align: center;
 }
 /*
 =============== 
@@ -343,7 +347,51 @@ About
 ===============
 */
 /* section title added to globals */
-
+.about-photo {
+  max-width: 25rem;
+  max-height: 30rem;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+.about-title {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+.about-title .underline {
+  margin-left: 0;
+}
+.about-center {
+  display: grid;
+  gap: 3rem 2rem;
+}
+.about-img {
+  justify-self: center;
+}
+@media (min-width: 768px) {
+  .about-center {
+    grid-template-columns: 1fr 1fr;
+  }
+  .about-info {
+    align-self: center;
+  }
+}
+@media (min-width: 992px) {
+  .about-img {
+    position: relative;
+  }
+  .about-img::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 0.25rem solid var(--clr-primary-5);
+    top: 2rem;
+    right: -2rem;
+    left: -2rem;
+    z-index: -1;
+    border-radius: var(--radius);
+  }
+}
 /*
 =============== 
 Services
